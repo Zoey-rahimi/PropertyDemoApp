@@ -15,3 +15,9 @@ viewModel:Contains viewModel class.
 * With SwipeRefreshLayout, the user can refresh the contents of the view via a vertical swipe gesture.
 
 * A Network Security Configuration xml file has been added to the app to specify the settings for the app.(Needed for API 28)
+
+## Screenshots
+![Alt text](/listFragment.jpg?raw=true "ListFragment")
+
+![Alt text](/detailFragment.jpg?raw=true "DetailFragment")
+
