@@ -36,7 +36,7 @@ class ListFragment : Fragment() {
 
         viewModel = ViewModelProviders.of(this).get(PropertyViewModel::class.java)
 
-        viewModel.refresh()
+        viewModel.refresh(false)
 
         propertyRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
@@ -47,7 +47,7 @@ class ListFragment : Fragment() {
             propertyRecyclerView.visibility = View.GONE
             loadingView.visibility = View.VISIBLE
             listError.visibility = View.GONE
-            viewModel.refresh()
+            viewModel.refresh(true)
             refreshLayout.isRefreshing = false
         }
         observeViewModel()

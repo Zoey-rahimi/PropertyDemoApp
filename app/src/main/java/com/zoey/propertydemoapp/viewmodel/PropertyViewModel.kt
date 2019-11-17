@@ -20,8 +20,11 @@ class PropertyViewModel : ViewModel() {
     val loading = MutableLiveData<Boolean>()
     val loadingError = MutableLiveData<Boolean>()
 
-    fun refresh() {
-        fetchFromRemote()
+    fun refresh(isRefresh: Boolean): MutableLiveData<List<Property>> {
+        if (propertyList.value.isNullOrEmpty() or isRefresh) {
+            fetchFromRemote()
+        }
+        return propertyList
     }
 
     private fun fetchFromRemote() {
