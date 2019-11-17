@@ -17,7 +17,7 @@ viewModel:Contains viewModel class.
 * A Network Security Configuration xml file has been added to the app to specify the settings for the app.(Needed for API 28)
 
 ## Screenshots
-![Alt text](/listFragment.jpg?raw=true "ListFragment")
+![Alt text](/listFragment.jpg?raw=true "ListFragment" | width=100)
 
 ![Alt text](/detailFragment.jpg?raw=true "DetailFragment")
 
