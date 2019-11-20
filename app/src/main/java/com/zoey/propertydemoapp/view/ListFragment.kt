@@ -8,19 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.zoey.propertydemoapp.R
 import com.zoey.propertydemoapp.viewmodel.PropertyViewModel
 import kotlinx.android.synthetic.main.fragment_list.*
+import kotlinx.android.synthetic.main.property_item.view.*
 
 /**
  * A simple [Fragment] subclass.
  */
-class ListFragment : Fragment() {
+class ListFragment : Fragment(), PropertyClickListener {
 
     private lateinit var viewModel: PropertyViewModel
-    private val propertyListAdapter = PropertyListAdapter(arrayListOf())
+    private val propertyListAdapter = PropertyListAdapter(arrayListOf(),this)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +53,12 @@ class ListFragment : Fragment() {
             refreshLayout.isRefreshing = false
         }
         observeViewModel()
+    }
+
+    override fun onPropertyClicked(view: View) {
+        val action = ListFragmentDirections.actionListFragmentToDetailFragment()
+        action.propertyID = view.propert_id.text.toString()
+        Navigation.findNavController(view).navigate(action)
     }
 
     private fun observeViewModel() {
