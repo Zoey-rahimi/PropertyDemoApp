@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.navArgs
 
 import com.zoey.propertydemoapp.R
 import kotlinx.android.synthetic.main.fragment_detail.*
@@ -14,7 +15,9 @@ import kotlinx.android.synthetic.main.fragment_detail.*
  * A simple [Fragment] subclass.
  */
 class DetailFragment : Fragment() {
-    private var propertyID = ""
+
+    private val args: DetailFragmentArgs by navArgs()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,9 +29,6 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        arguments?.let {
-            propertyID = "Property ID: ${DetailFragmentArgs.fromBundle(it).propertyID}"
-        }
-        detail_textView.text = propertyID
+        detail_textView.text = String.format("Property ID: %s", args.propertyID)
     }
 }
