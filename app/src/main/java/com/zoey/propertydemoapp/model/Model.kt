@@ -6,131 +6,131 @@ import com.google.gson.annotations.SerializedName
 data class Properties(
 
     @SerializedName("ad_id")
-    var adId: Int?,
+    val adId: Int?,
 
     @SerializedName("data")
-    var data: Data?,
+    val data: Data?,
 
     @SerializedName("title")
-    var title: String?
+    val title: String?
 )
 
 data class Data(
 
     @SerializedName("listings")
-    var propertyList: List<Property>?
+    val propertyList: List<Property>?
 )
 
 data class Property(
 
     @SerializedName("Id")
-    var id: String?,
+    val id: String?,
 
     @SerializedName("AgencyLogoUrl")
-    var agencyLogoUrl: String?,
+    val agencyLogoUrl: String?,
 
     @SerializedName("Area")
-    var area: String?,
+    val area: String?,
 
     @SerializedName("AuctionDate")
-    var auctionDate: String?,
+    val auctionDate: String?,
 
     @SerializedName("AvailableFrom")
-    var availableFrom: Any?,
+    val availableFrom: Any?,
 
     @SerializedName("Bathrooms")
-    var bathrooms: Int?,
+    val bathrooms: Int?,
 
     @SerializedName("Bedrooms")
-    var bedrooms: Int?,
+    val bedrooms: Int?,
 
     @SerializedName("Carspaces")
-    var carspaces: Int?,
+    val carspaces: Int?,
 
     @SerializedName("DateFirstListed")
-    var dateFirstListed: String?,
+    val dateFirstListed: String?,
 
     @SerializedName("DateUpdated")
-    var dateUpdated: String?,
+    val dateUpdated: String?,
 
     @SerializedName("Description")
-    var description: String?,
+    val description: String?,
 
     @SerializedName("DisplayPrice")
-    var displayPrice: String?,
+    val displayPrice: String?,
 
     @SerializedName("Currency")
-    var currency: String?,
+    val currency: String?,
 
     @SerializedName("Location")
-    var location: Location?,
+    val location: Location?,
 
     @SerializedName("owner")
-    var owner: Owner?,
+    val owner: Owner?,
 
     @SerializedName("ImageUrls")
-    var imageUrls: List<String>?,
+    val imageUrls: List<String>?,
 
     @SerializedName("is_premium")
-    var isPremium: Int?,
+    val isPremium: Int?,
 
     @SerializedName("IsPriority")
-    var isPriority: Int?,
+    val isPriority: Int?,
 
     @SerializedName("Latitude")
-    var latitude: Float?,
+    val latitude: Float?,
 
     @SerializedName("ListingPrice")
-    var listingPrice: Any?,
+    val listingPrice: Any?,
 
     @SerializedName("ListingStatistics")
-    var listingStatistics: Any?,
+    val listingStatistics: Any?,
 
     @SerializedName("ListingType")
-    var listingType: String?,
+    val listingType: String?,
 
     @SerializedName("ListingTypeString")
-    var listingTypeString: String?,
+    val listingTypeString: String?,
 
     @SerializedName("Longitude")
-    var longitude: Float? = null
+    val longitude: Float? = null
 )
 
 data class Owner(
     @SerializedName("name")
-    var name: String?,
+    val name: String?,
 
     @SerializedName("lastName")
-    var lastName: String?,
+    val lastName: String?,
 
     @SerializedName("dob")
-    var dob: String?,
+    val dob: String?,
 
     @SerializedName("image")
-    var image: Image?
+    val image: Image?
 )
 
 data class Location(
     @SerializedName("Address")
-    var address: String?,
+    val address: String?,
 
     @SerializedName("Address2")
-    var address2: String?,
+    val address2: String?,
 
     @SerializedName("State")
-    var state: String?,
+    val state: String?,
 
     @SerializedName("Suburb")
-    var suburb: String?
+    val suburb: String?
 )
 
 data class Image(
 
     @SerializedName("medium")
-    var medium: Medium
+    val medium: Medium
 )
 
 data class Medium(
     @SerializedName("url")
-    var url: String?
+    val url: String?
 )
